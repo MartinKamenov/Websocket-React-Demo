@@ -7,7 +7,7 @@ class EchoComponent extends Component {
 
     componentDidMount(){
         // this is an "echo" websocket service for testing pusposes
-        this.connection = new WebSocket('wss://echo.websocket.org');
+        this.connection = new WebSocket('ws://localhost:5000/echo');
         // listen to onmessage event
         this.connection.onmessage = evt => { 
             // add the new message to state
